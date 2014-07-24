@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/plataformatec/simple_form.git
+  revision: ed3de1c2b566a962697529e824953f6b280e2867
+  branch: master
+  specs:
+    simple_form (3.1.0.rc2)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -25,15 +34,14 @@ GEM
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
-    anjlab-bootstrap-rails (3.0.0.2)
-      railties (>= 3.0)
-      sass (>= 3.2)
     apartment (0.22.1)
       activerecord (>= 3.1.2)
       rack (>= 1.3.6)
     arel (4.0.0)
     atomic (1.1.13)
     bcrypt-ruby (3.1.2)
+    bootstrap-sass (3.1.1.1)
+      sass (~> 3.2)
     bourne (1.4.0)
       mocha (~> 0.13.2)
     builder (3.1.4)
@@ -201,8 +209,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  anjlab-bootstrap-rails (~> 3.0.0.2)
   apartment (~> 0.22.1)
+  bootstrap-sass (~> 3.1.1)
   capybara
   coffee-rails (~> 4.0.0)
   database_cleaner
@@ -219,4 +227,5 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 4.0.0)
   shoulda-matchers
+  simple_form (~> 3.1.0.rc1)!
   uglifier (>= 1.3.0)

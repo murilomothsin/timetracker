@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe 'user signin' do
-  let(:user) { build(:user) }
-  let!(:account) { create(:account_with_schema, owner: user) }
+  let!(:account) { create(:account_with_schema) }
+  let(:user) { account.owner }
 
   context 'with valid credentials' do
     it 'allows signin' do
@@ -35,11 +35,12 @@ describe 'user signin' do
 end
 
 describe 'user signout' do
-  let(:user) { build(:user) }
-  let!(:account) { create(:account_with_schema, owner: user) }
+  let!(:account) { create(:account_with_schema) }
+  let(:user) { account.owner }
 
   it 'allows user to sign out' do
     sign_user_in(user, subdomain: account.subdomain)
+    visit subdomain_root_path
     click_link 'Sign out'
     expect(page).to have_content('Signed out successfully')
   end
